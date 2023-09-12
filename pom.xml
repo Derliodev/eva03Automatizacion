@@ -76,12 +76,11 @@
 	</build>
 
 	<distributionManagement>
-		<repository>
-			<id>central</id>
-			<name>a0qwha98cjavf-artifactory-primary-0-releases</name>
-			<url>
-				https://jfrogiplacex.jfrog.io/artifactory/evaluacion_tres-libs-release</url>
-		</repository>
+    		<repository>
+        		<id>central</id>
+        		<name>derliodev-artifactory-primary-0-releases</name>
+        		<url>https://derliodev.jfrog.io/artifactory/default-libs-release</url>
+    		</repository>
 	</distributionManagement>
 </project>
 
