@@ -2,7 +2,8 @@ pipeline {
     agent any
     
     environment {
-        MAVEN_TOOL_NAME = 'Maven'
+        MAVEN_HOME = 'C:\\apache-maven-3.9.4-bin\\apache-maven-3.9.4'
+        PATH = "${MAVEN_HOME}\\bin:${env.PATH}"
         ARTIFACTORY_URL = 'https://derliodev.jfrog.io/artifactory'
         ARTIFACTORY_REPO = 'eva-libs-snapshot'
         ARTIFACTORY_TOKEN = 'cmVmdGtuOjAxOjE3MjYwMTM3MDg6WXR2TGVQWDBKYXVxVVRkSUNwakhxYzd5MVN6'
