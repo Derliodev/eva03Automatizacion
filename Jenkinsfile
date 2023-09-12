@@ -12,7 +12,7 @@ pipeline {
         stage('Configurar Maven') {
             steps {
                 script {
-                    def mvnHome = tool name: 'Maven', type: 'maven'
+                    def mvnHome = tool name: 'Maven 3.8.4', type: 'hudson.tasks.Maven$MavenInstallation'
                     env.PATH = "${mvnHome}/bin:${env.PATH}"
                 }
             }
