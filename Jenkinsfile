@@ -8,16 +8,6 @@ pipeline {
     }
     
     stages {
-
-        stage('Configurar Maven') {
-            steps {
-                script {
-                    def mvnHome = tool name: 'Maven 3.8.4', type: 'hudson.tasks.Maven$MavenInstallation'
-                    env.PATH = "${mvnHome}/bin:${env.PATH}"
-                }
-            }
-        }
-        
         stage('Checkout') {
             steps {
                 // Clonar repositorio
