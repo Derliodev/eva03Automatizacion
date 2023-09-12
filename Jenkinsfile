@@ -6,6 +6,15 @@ pipeline {
         ARTIFACTORY_REPO = 'eva-libs-snapshot'
         ARTIFACTORY_TOKEN = 'cmVmdGtuOjAxOjE3MjYwMTM3MDg6WXR2TGVQWDBKYXVxVVRkSUNwakhxYzd5MVN6'
     }
+
+    stage('Configurar Maven') {
+        steps {
+            script {
+                def mvnHome = tool name: 'Maven', type: 'maven'
+                env.PATH = "${mvnHome}/bin:${env.PATH}"
+            }
+        }
+    }
     
     stages {
         stage('Checkout') {
